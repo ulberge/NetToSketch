@@ -1,0 +1,92 @@
+body {
+  background: #ababab !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  opacity: 0.7;
+}
+
+.selection_matches.overlay {
+  left: 0;
+  opacity: 1;
+}
+
+canvas {
+  border: 1px solid #000;
+  margin: 8px;
+}
+
+img {
+  margin: 4px;
+}
+
+#matches img {
+  transform: rotate(180deg);
+}
+
+#L1_matches .arrow {
+  vertical-align: top;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+#L2_matches .arrow {
+  vertical-align: top;
+  margin-top: 18px;
+  display: inline-block;
+}
+
+.layer_row table {
+  margin: 0 auto;
+}
+
+.layer_row table td {
+  text-align: center;
+}
+
+
+.filterIcon {
+  background-image: url('final_visual_concepts_sprite.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.filterIcon.tr {
+  transform: scaleX(-1);
+}
+.filterIcon.bl {
+  transform: scaleY(-1);
+}
+.filterIcon.br {
+  transform: scaleX(-1) scaleY(-1);
+}
+
+.filterIcon.L1 {
+  width: 15px;
+  height: 15px;
+}
+.filterIcon.L1.vert {
+  background-position: -43px -271px;
+}
+.filterIcon.L1.hor {
+  background-position: -42px -271px;
+  transform: rotate(90deg);
+}
+.filterIcon.L2 {
+  width: 25px;
+  height: 25px;
+}
+.filterIcon.L2.corner {
+  background-position: -36px -62px;
+}
+.filterIcon.L3 {
+  width: 43px;
+  height: 43px;
+}
+.filterIcon.L3.square {
+  background-position: -131px -4px;
+}
+

@@ -1,0 +1,82 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sketch Repeater</title>
+    <meta name="description" content="A cool thing made with ML">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nicolaspanel/numjs@0.15.1/dist/numjs.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="col-md-4">
+          <div id="sketch_stored"></div>
+          <div id="sketch_temp" class="overlay"></div>
+          <div id="sketch_comp" class="overlay"></div>
+          <div id="sketch_debug" class="overlay"></div>
+        </div>
+        <div class="col-md-8">
+          <div id="layer_input" class="layer_row">
+            <table>
+              <tr class="filters"></tr>
+              <tr class="outputs"></tr>
+            </table>
+          </div>
+          <div id="layer_L1" class="layer_row">
+            <table>
+              <tr class="filters"></tr>
+              <tr class="outputs"></tr>
+              <tr class="filterIcons">
+                <td><div class="filterIcon L1 vert"></div></td>
+                <td><div class="filterIcon L1 hor"></div></td>
+              </tr>
+            </table>
+          </div>
+          <div id="layer_L2" class="layer_row">
+            <table>
+              <tr class="filters"></tr>
+              <tr class="outputs"></tr>
+              <tr class="filterIcons">
+                <td><div class="filterIcon L2 corner"></div></td>
+                <td><div class="filterIcon L2 corner tr"></div></td>
+                <td><div class="filterIcon L2 corner bl"></div></td>
+                <td><div class="filterIcon L2 corner br"></div></td>
+              </tr>
+            </table>
+          </div>
+          <div id="layer_L3" class="layer_row">
+            <table>
+              <tr class="filters"></tr>
+              <tr class="outputs"></tr>
+              <tr class="filterIcons">
+                <td><div class="filterIcon L3 square"></div></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="sketch_stored_scaled" style="display:none;"></div>
+      </div>
+      <script src="/public/sketch_a_net.js"></script>
+      <script src="/public/net_to_sketch.js"></script>
+      <script src="/public/sketch.js"></script>
+    </main>
+  </body>
+</html>
