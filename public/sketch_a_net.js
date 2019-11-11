@@ -16,51 +16,173 @@
       ]
     ],
   ];
-  // const biases1 = Array(2).fill(-1);
+  // const biases1 = Array(2).fill(-2);
   const biases1 = Array(2).fill(0);
 
   // L2 - corners
-  const diags = [
-      [
-          [1, 1, 0.5],
-          [1, 0.5, 0],
-          [0.5, 0, 0]
-      ],
-      [
-          [0, 0, 0.5],
-          [0, 0.5, 1],
-          [0.5, 1, 1]
-      ],
-      [
-          [0.5, 1, 1],
-          [0, 0.5, 1],
-          [0, 0, 0.5]
-      ],
-      [
-          [0.5, 0, 0],
-          [1, 0.5, 0],
-          [1, 1, 0.5]
-      ],
-  ];
+  // const diags = [
+  //     [
+  //         [0, 1, 0],
+  //         [1, 0, 0],
+  //         [0, 0, 0]
+  //     ],
+  //     [
+  //         [0, 0, 0],
+  //         [0, 0, 1],
+  //         [0, 1, 0]
+  //     ],
+  //     [
+  //         [0, 1, 0],
+  //         [0, 0, 1],
+  //         [0, 0, 0]
+  //     ],
+  //     [
+  //         [0, 0, 0],
+  //         [1, 0, 0],
+  //         [0, 1, 0]
+  //     ],
+  // ];
+  // const diags = [
+  //     [
+  //         [1, 1, 0.5],
+  //         [1, 0.5, 0],
+  //         [0.5, 0, 0]
+  //     ],
+  //     [
+  //         [0, 0, 0.5],
+  //         [0, 0.5, 1],
+  //         [0.5, 1, 1]
+  //     ],
+  //     [
+  //         [0.5, 1, 1],
+  //         [0, 0.5, 1],
+  //         [0, 0, 0.5]
+  //     ],
+  //     [
+  //         [0.5, 0, 0],
+  //         [1, 0.5, 0],
+  //         [1, 1, 0.5]
+  //     ],
+  // ];
+  // let weights2 = [
+  //     [  // top left
+  //         diags[3],
+  //         diags[2]
+  //     ],
+  //     [  // top right
+  //         diags[1],
+  //         diags[0]
+  //     ],
+  //     [  // bottom left
+  //         diags[0],
+  //         diags[1]
+  //     ],
+  //     [  // bottom right
+  //         diags[2],
+  //         diags[3]
+  //     ],
+  // ];
   let weights2 = [
       [  // top left
-          diags[3],
-          diags[2]
+        [
+            [-1, -1, -1],
+            [-1, 1, -1],
+            [-1, 1, -1]
+        ],
+        [
+            [-1, -1, -1],
+            [-1, 1, 1],
+            [-1, -1, -1]
+        ],
       ],
       [  // top right
-          diags[1],
-          diags[0]
+        [
+            [-1, -1, -1],
+            [-1, 1, -1],
+            [-1, 1, -1]
+        ],
+        [
+            [-1, -1, -1],
+            [1, 1, -1],
+            [-1, -1, -1]
+        ],
       ],
       [  // bottom left
-          diags[0],
-          diags[1]
+        [
+            [-1, 1, -1],
+            [-1, 1, -1],
+            [-1, -1, -1]
+        ],
+        [
+            [-1, -1, -1],
+            [-1, 1, 1],
+            [-1, -1, -1]
+        ],
       ],
       [  // bottom right
-          diags[2],
-          diags[3]
+        [
+            [-1, 1, -1],
+            [-1, 1, -1],
+            [-1, -1, -1]
+        ],
+        [
+            [-1, -1, -1],
+            [1, 1, -1],
+            [-1, -1, -1]
+        ],
       ],
   ];
-  // const biases2 = Array(4).fill(-15);
+  // let weights2 = [
+  //     [  // top left
+  //       [
+  //           [-1, -1, -1],
+  //           [-1, 1, -1],
+  //           [-1, 1, -1]
+  //       ],
+  //       [
+  //           [1, 1, 1],
+  //           [-1, -1, -1],
+  //           [0, 0, 0]
+  //       ],
+  //     ],
+  //     [  // top right
+  //       [
+  //           [0, -1, 1],
+  //           [0, -1, 1],
+  //           [0, -1, 1]
+  //       ],
+  //       [
+  //           [1, 1, 1],
+  //           [-1, -1, -1],
+  //           [0, 0, 0]
+  //       ],
+  //     ],
+  //     [  // bottom left
+  //       [
+  //           [1, -1, 0],
+  //           [1, -1, 0],
+  //           [1, -1, 0]
+  //       ],
+  //       [
+  //           [0, 0, 0],
+  //           [-1, -1, -1],
+  //           [1, 1, 1]
+  //       ],
+  //     ],
+  //     [  // bottom right
+  //       [
+  //           [0, -1, 1],
+  //           [0, -1, 1],
+  //           [0, -1, 1]
+  //       ],
+  //       [
+  //           [0, 0, 0],
+  //           [-1, -1, -1],
+  //           [1, 1, 1]
+  //       ],
+  //     ],
+  // ];
+  // const biases2 = Array(4).fill(-5);
   const biases2 = Array(4).fill(0);
 
   // L3 - square
@@ -88,7 +210,7 @@
           ]
       ],
   ];
-  // const biases3 = Array(1).fill(-5);
+  // const biases3 = Array(1).fill(-3);
   const biases3 = Array(1).fill(0);
 
   // const weights = [ weights1, weights2, weights3 ].map(a => nj.array(a).transpose(2, 3, 1, 0).tolist());
@@ -181,62 +303,7 @@
     new p5(getFilterSketch(weights3[0][3], 2), $('#layer_L3 .filter0')[0]);
   }
 
-  function getOutputSketch(arr, layer_i) {
-    const outputSizes = [16, 16, 16];
-    const scale = 5;
-
-    return (p) => {
-      const sketchSize = outputSizes[layer_i];
-
-      p.setup = function setup() {
-        p.pixelDensity(1);
-        p.createCanvas(sketchSize * scale, sketchSize * scale);
-        p.background(255);
-        p.noLoop();
-        p.noStroke();
-      };
-
-      p.draw = function draw() {
-        // normalize array in 255
-        const arr_flat = arr.flat();
-        const arr_flat_norm = normalize_array(arr_flat);
-
-        let i = 0;
-        for (let y = 0; y < sketchSize; y += 1) {
-          for (let x = 0; x < sketchSize; x += 1) {
-            p.fill(arr_flat_norm[i] * 255);
-            p.rect(x * scale, y * scale, scale, scale);
-            i += 1;
-          }
-        }
-      }
-    };
-  }
-
-  function drawOutputs(outputLayers) {
-    $('#layer_L1 .outputs').empty();
-    $('#layer_L2 .outputs').empty();
-    $('#layer_L3 .outputs').empty();
-
-    $('#layer_L1 .outputs').append('<td><div class="output0"></div></td>');
-    new p5(getOutputSketch(outputLayers[0][0], 0), $('#layer_L1 .output0')[0]);
-    $('#layer_L1 .outputs').append('<td><div class="output1"></div></td>');
-    new p5(getOutputSketch(outputLayers[0][1], 0), $('#layer_L1 .output1')[0]);
-
-    $('#layer_L2 .outputs').append('<td><div class="output0"></div></td>');
-    new p5(getOutputSketch(outputLayers[1][0], 1), $('#layer_L2 .output0')[0]);
-    $('#layer_L2 .outputs').append('<td><div class="output1"></div></td>');
-    new p5(getOutputSketch(outputLayers[1][1], 1), $('#layer_L2 .output1')[0]);
-    $('#layer_L2 .outputs').append('<td><div class="output2"></div></td>');
-    new p5(getOutputSketch(outputLayers[1][2], 1), $('#layer_L2 .output2')[0]);
-    $('#layer_L2 .outputs').append('<td><div class="output3"></div></td>');
-    new p5(getOutputSketch(outputLayers[1][3], 1), $('#layer_L2 .output3')[0]);
-
-    $('#layer_L3 .outputs').append('<td><div class="output0"></div></td>');
-    new p5(getOutputSketch(outputLayers[2][0], 2), $('#layer_L3 .output0')[0]);
-  }
-
-  function loadLayers() {
+  function loadLayers(state) {
     const modelLayers = [];
 
     modelLayers.push(tf.layers.conv2d({
@@ -280,12 +347,12 @@
     let curr = tf.tensor4d(imgArr_f);
     let layerOutputs = [];
     modelLayers.forEach((layer, i) => {
-      console.log('L' + (i + 1) + ' input', curr.shape);
+      // console.log('L' + (i + 1) + ' input', curr.shape);
       const result = layer.apply(curr);
       layerOutputs.push(result.arraySync());
       curr = result;
     });
-    console.log('output', curr.shape);
+    // console.log('output', curr.shape);
 
     // format into neurons
     layerOutputs = layerOutputs.map(o => {
@@ -301,6 +368,5 @@
     drawFilters,
     loadLayers,
     evalLayers,
-    drawOutputs
   };
 }());

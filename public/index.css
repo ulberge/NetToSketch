@@ -18,6 +18,11 @@ canvas {
   margin: 8px;
 }
 
+#sketch_networkAnimation canvas {
+  margin: 0;
+  border: none;
+}
+
 img {
   margin: 4px;
 }
@@ -42,10 +47,65 @@ img {
   margin: 0 auto;
 }
 
+.layer_row table tr canvas {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .layer_row table td {
   text-align: center;
 }
 
+.layer_row {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#layer_input canvas {
+  /*zoom: 3;*/
+  margin: 0;
+  margin-top: 5px;
+  /*border: 0.4px solid black;*/
+  border: 1px solid black;
+}
+
+.filters td {
+  position: relative;
+}
+
+.remainders {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  top: 0px;
+  /*font-size: 10px;*/
+}
+
+.drawingMachine {
+  margin-top: 20px;
+}
+
+.canvasContainer {
+  margin-top: 80px;
+  position: relative;
+}
+
+.remainderText {
+  display: inline-block;
+  margin: 0 25px;
+  display: none;
+}
+
+.filters {
+  background-color: #888;
+}
+
+.outputs td {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
 
 .filterIcon {
   background-image: url('final_visual_concepts_sprite.png');
