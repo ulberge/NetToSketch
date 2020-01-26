@@ -473,7 +473,7 @@
 
   async function run() {
     const state = {
-      speed: 30
+      speed: 5
     };
     await setup(state);
 
