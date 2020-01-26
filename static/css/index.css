@@ -108,7 +108,7 @@ img {
 }
 
 .filterIcon {
-  background-image: url('/static/final_visual_concepts_sprite.png');
+  background-image: url('static/final_visual_concepts_sprite.png');
   background-repeat: no-repeat;
   display: inline-block;
   border: 1px solid black;
